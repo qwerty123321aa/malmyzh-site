@@ -1,25 +1,59 @@
 [
   {
+    "file": "malmyzh-loading.jpg",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmyzh3-min-1024x768.jpg",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "credit": "Галерея проекта «Малмыжское месторождение», АО «Тех Взрыв Инвест». Индивидуальный автор и дата съёмки не указаны.",
+    "checked": "2026-11-05"
+  },
+  {
+    "file": "malmyzh-rock.jpg",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmyzhskoe-mestorozhdenie2-1024x449.jpg",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "credit": "Галерея проекта «Малмыжское месторождение», АО «Тех Взрыв Инвест». Индивидуальный автор и дата съёмки не указаны.",
+    "checked": "2026-11-05"
+  },
+  {
+    "file": "malmyzh-fleet.jpg",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmyzhskoe-mestorozhdenie-mashiny-1024x768.jpg",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "credit": "Галерея проекта «Малмыжское месторождение», АО «Тех Взрыв Инвест». Индивидуальный автор и дата съёмки не указаны.",
+    "checked": "2026-11-05"
+  },
+  {
+    "file": "malmyzh-drilling.jpg",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmizhskoe11-1024x768.jpg",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "credit": "Галерея проекта «Малмыжское месторождение», АО «Тех Взрыв Инвест». Индивидуальный автор и дата съёмки не указаны.",
+    "checked": "2026-11-05"
+  },
+  {
+    "file": "malmyzh-excavator.jpg",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmizhskoe14-1024x768.jpg",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "credit": "Галерея проекта «Малмыжское месторождение», АО «Тех Взрыв Инвест». Индивидуальный автор и дата съёмки не указаны.",
+    "checked": "2026-11-05"
+  },
+  {
+    "file": "malmyzh-night.jpg",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmizhskoe15-1024x1024.jpg",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "credit": "Галерея проекта «Малмыжское месторождение», АО «Тех Взрыв Инвест». Индивидуальный автор и дата съёмки не указаны.",
+    "checked": "2026-11-05"
+  },
+  {
+    "file": "malmyzh-winter.jpg",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmizhskoe16-1024x768.jpg",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "credit": "Галерея проекта «Малмыжское месторождение», АО «Тех Взрыв Инвест». Индивидуальный автор и дата съёмки не указаны.",
+    "checked": "2026-11-05"
+  },
+  {
     "file": "people.jpg",
     "page": "https://amurminerals.ru/",
     "url": "https://amurminerals.ru/images/tild3564-6239-4535-a530-383039323334__2024-08-27_04-37-51_.jpg",
     "credit": "Официальный сайт ООО «Амур Минералс»; отдельный автор и дата фотографии не указаны.",
     "checked": "2026-11-05"
-  },
-  {
-    "file": "hero.svg",
-    "credit": "Авторская векторная иллюстрация учебного проекта. Условная схема, не фотография и не производственный чертёж.",
-    "basis": "Общие признаки открытой добычи. Не изображает фактическую планировку Малмыжа."
-  },
-  {
-    "file": "map.svg",
-    "credit": "Авторская векторная иллюстрация учебного проекта. Условная схема, не фотография и не производственный чертёж.",
-    "basis": "Роснедра, расположение в Хабаровском крае; условная география Приамурья."
-  },
-  {
-    "file": "geology.svg",
-    "credit": "Авторская векторная иллюстрация учебного проекта. Условная схема, не фотография и не производственный чертёж.",
-    "basis": "Геологическое описание Роснедр, 29.10.2021."
   },
   {
     "file": "water-cycle.svg",
