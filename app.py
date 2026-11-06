@@ -168,5 +168,7 @@ def main():
 
 from portal import install
 install(globals())
+from light import install as install_light
+install_light(globals())
 
 if __name__=='__main__':main()
