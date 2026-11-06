@@ -64,7 +64,129 @@
     "file": "favicon.svg",
     "credit": "Авторская векторная иллюстрация учебного проекта. Условная схема, не фотография и не производственный чертёж.",
     "basis": "Авторский условный знак."
+  },
+  {
+    "file": "operator-specialist.webp",
+    "page": "https://amurminerals.ru/",
+    "url": "https://amurminerals.ru/images/tild6363-6363-4331-b633-643961643363__2024-08-27_04-37-51_.jpg",
+    "credit": "Изображение с официального сайта ООО «Амур Минералс». Автор и дата съёмки не указаны. Место съёмки отдельно не подтверждено; использовано как иллюстрация профессиональной темы, не документальная фотография конкретного объекта Малмыжа.",
+    "checked": "2026-11-06",
+    "rights": "Права сохраняются у правообладателя; свободная лицензия не заявлена. Для расширения публикации нужен согласованный пресс-пакет."
+  },
+  {
+    "file": "malmyzh-hangar.webp",
+    "title": "Производственная площадка зимой",
+    "alt": "Купольное сооружение и техника на зимней площадке Малмыжского проекта",
+    "category": "Инфраструктура",
+    "source": 9,
+    "credit": "АО «Тех Взрыв Инвест»",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmyzhskoe-mestorozhdenie-1024x768.jpg",
+    "note": "Дата съёмки и фотограф не указаны.",
+    "checked": "2026-11-06"
+  },
+  {
+    "file": "malmyzh-grader.webp",
+    "title": "Дорожные работы",
+    "alt": "Автогрейдер на площадке Малмыжского проекта",
+    "category": "Техника",
+    "source": 9,
+    "credit": "АО «Тех Взрыв Инвест»",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmyzhskoe-mestorozhdenie1-1024x427.jpg",
+    "note": "Дата съёмки и фотограф не указаны.",
+    "checked": "2026-11-06"
+  },
+  {
+    "file": "malmyzh-dozer.webp",
+    "title": "Бульдозер крупным планом",
+    "alt": "Бульдозер и самосвал на площадке Малмыжского проекта",
+    "category": "Техника",
+    "source": 9,
+    "credit": "АО «Тех Взрыв Инвест»",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmyzhskoe-mestorozhdenie-buldozer-1024x768.jpg",
+    "note": "Дата съёмки и фотограф не указаны.",
+    "checked": "2026-11-06"
+  },
+  {
+    "file": "malmyzh-loading-winter.webp",
+    "title": "Зимняя погрузка",
+    "alt": "Экскаватор загружает самосвал зимой",
+    "category": "Карьер",
+    "source": 9,
+    "credit": "АО «Тех Взрыв Инвест»",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmizhskoe12-1024x768.jpg",
+    "note": "Дата съёмки и фотограф не указаны.",
+    "checked": "2026-11-06"
+  },
+  {
+    "file": "malmyzh-service.webp",
+    "title": "Сервисный транспорт",
+    "alt": "Грузовой автомобиль с краном на зимней площадке",
+    "category": "Техника",
+    "source": 9,
+    "credit": "АО «Тех Взрыв Инвест»",
+    "page": "https://t-v-i.ru/proekty/malmyzhskoe-mestorozhdenie/",
+    "url": "https://t-v-i.ru/wp-content/uploads/2025/04/malmizhskoe13-1024x768.jpg",
+    "note": "Дата съёмки и фотограф не указаны.",
+    "checked": "2026-11-06"
+  },
+  {
+    "file": "malmyzh-factory.webp",
+    "title": "Внутри производственного корпуса",
+    "alt": "Металлоконструкции, мостовой кран и освещение корпуса Малмыжского ГОКа",
+    "category": "Фабрика",
+    "source": 16,
+    "credit": "БМ Электро",
+    "page": "https://bm-electro.ru/projects/ooo-%C2%ABamur-minerals%C2%BB.html",
+    "url": "https://bm-electro.ru/assets/cache_image/images/objects/2022%20%D0%B0%D0%BC%D1%83%D1%80%20%D0%BC%D0%B8%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%81/IMG_20220811_215150_0x800_35c.jpg",
+    "note": "Из галереи проекта «ООО Амур Минералс». Дата съёмки и фотограф не указаны; стадия строительства.",
+    "checked": "2026-11-06"
+  },
+  {
+    "file": "malmyzh-hall.webp",
+    "title": "Инженерное оснащение корпуса",
+    "alt": "Производственный корпус с установленными светильниками",
+    "category": "Фабрика",
+    "source": 16,
+    "credit": "БМ Электро",
+    "page": "https://bm-electro.ru/projects/ooo-%C2%ABamur-minerals%C2%BB.html",
+    "url": "https://bm-electro.ru/assets/cache_image/images/2023/image-16-11-23-07-56_0x800_646.jpeg",
+    "note": "Из галереи проекта «ООО Амур Минералс». Дата съёмки и фотограф не указаны; стадия строительства.",
+    "checked": "2026-11-06"
+  },
+  {
+    "file": "malmyzh-lighting.webp",
+    "title": "Промышленное освещение",
+    "alt": "Светильники и металлоконструкции под кровлей корпуса",
+    "category": "Фабрика",
+    "source": 16,
+    "credit": "БМ Электро",
+    "page": "https://bm-electro.ru/projects/ooo-%C2%ABamur-minerals%C2%BB.html",
+    "url": "https://bm-electro.ru/assets/cache_image/images/2023/image-16-11-23-07-56%20%281%29%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_0x800_35c.jpg",
+    "note": "Из галереи проекта «ООО Амур Минералс». Дата съёмки и фотограф не указаны; стадия строительства.",
+    "checked": "2026-11-06"
+  },
+  {
+    "file": "amur-culture.webp",
+    "title": "Культура региона",
+    "Тitle": "",
+    "alt": "Выступление танцевального коллектива в традиционных костюмах",
+    "category": "Регион",
+    "source": 14,
+    "credit": "«Амур Минералс»",
+    "page": "https://amurminerals.ru/socialinvestment",
+    "url": "https://amurminerals.ru/images/tild3338-3165-4734-a466-373232643863__dsc00875.jpg",
+    "note": "Фото из раздела «Социальные инвестиции». Название события, место и дата не указаны.",
+    "checked": "2026-11-06"
+  },
+  {
+    "file": "amur-minerals-logo.svg",
+    "url": "https://amurminerals.ru/images/tild3234-3864-4639-b464-366338303439____logo_color.svg",
+    "page": "https://amurminerals.ru/",
+    "credit": "Оригинальный логотип с официального сайта ООО «Амур Минералс». Используется для обозначения компании; партнёрство не заявляется.",
+    "checked": "2026-11-06"
   }
-,
-  {"file":"operator-specialist.webp","page":"https://amurminerals.ru/","url":"https://amurminerals.ru/images/tild6363-6363-4331-b633-643961643363__2024-08-27_04-37-51_.jpg","credit":"Изображение с официального сайта ООО «Амур Минералс». Автор и дата съёмки не указаны. Место съёмки отдельно не подтверждено; использовано как иллюстрация профессиональной темы, не документальная фотография конкретного объекта Малмыжа.","checked":"2026-11-06","rights":"Права сохраняются у правообладателя; свободная лицензия не заявлена. Для расширения публикации нужен согласованный пресс-пакет."}
 ]
