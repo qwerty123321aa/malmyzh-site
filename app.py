@@ -137,6 +137,8 @@ def build(destination=DIST):
     for slug in PAGES:(destination/f'{slug}.html').write_text(render(slug),encoding='utf-8')
     (destination/'.nojekyll').touch()
     (destination/'404.html').write_text(render('index').replace('<h1>Малмыж.', '<p class="not-found">Такой страницы нет. Начните с главной.</p><h1>Малмыж.'),encoding='utf-8')
+    from portal import build_extra
+    build_extra(destination,PAGES,render)
     return destination
 
 class Handler(SimpleHTTPRequestHandler):
@@ -158,9 +160,13 @@ def main():
         import check_site
         check_site.check()
     else:
-        server=ThreadingHTTPServer(('127.0.0.1',args.port),functools.partial(Handler,directory=str(ROOT)))
+        build()
+        server=ThreadingHTTPServer(('127.0.0.1',args.port),functools.partial(Handler,directory=str(DIST)))
         print(f'Малмыж: http://127.0.0.1:{args.port}',flush=True)
         try:server.serve_forever()
         except KeyboardInterrupt:server.server_close()
+
+from portal import install
+install(globals())
 
 if __name__=='__main__':main()
