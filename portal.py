@@ -38,7 +38,16 @@ def install(g):
 
     def geology():
         diagram='<figure class="geo-figure"><img src="assets/porphyry-section.svg" alt="Порфировая система: интрузия в глубине, сеть рудных прожилков и окружающие осадочные породы"><figcaption>Порфировая система · <a href="sources.html#source-7">USGS</a></figcaption></figure>'
-        minerals='<section class="prose"><h2>Минералы руды</h2><p>Роснедра указывают пирит и халькопирит в составе руд Малмыжа.'+cite(1)+'</p></section><div class="mineral-grid"><article><span class="formula">CuFeS₂</span><h3>Халькопирит</h3><p>Сульфид меди и железа. Один из основных медных минералов порфировых руд.</p></article><article><span class="formula">FeS₂</span><h3>Пирит</h3><p>Сульфид железа. Его присутствие важно при изучении поведения сульфидных пород в воде и воздухе.</p></article></div><p class="muted">Формулы — общие минералогические сведения. На фотографиях горной массы отдельные минералы не идентифицированы; снимки образцов без подтверждённого происхождения не представлены.</p>'
+        specimens = [
+            ("chalcopyrite", "Халькопирит", "CuFeS₂", "Латунно-жёлтые кристаллы на светлой породе", "Сульфид меди и железа. Один из основных медных минералов руд Малмыжа.", "Канзас, США", "Rob Lavinsky, iRocks.com", "Chalcopyrite-199453.jpg", "3.0"),
+            ("pyrite", "Пирит", "FeS₂", "Кубические кристаллы пирита с металлическим блеском", "Сульфид железа. У этого образца хорошо видны плоские грани кубических кристаллов.", "Уанзала, Перу", "Ivar Leidus", "Pyrite_-_Huanzala_mine,_Huallanca,_Bolognesi,_Ancash,_Peru.jpg", "4.0"),
+        ]
+        cards = []
+        for file, name, formula, alt, description, locality, author, original, license_version in specimens:
+            cards.append(f'''<article><figure class="specimen"><img src="assets/{file}.png" alt="{alt}" loading="lazy">
+                <figcaption>{locality} · <a href="https://commons.wikimedia.org/wiki/File:{original}">{author}</a> · <a href="https://creativecommons.org/licenses/by-sa/{license_version}/">CC BY-SA {license_version}</a></figcaption></figure>
+                <span class="formula">{formula}</span><h3>{name}</h3><p>{description}</p></article>''')
+        minerals = section('Минералы руды', '<p>В рудах Малмыжа геологи обнаружили пирит и халькопирит.' + cite(1) + '</p>') + '<div id="minerals" class="mineral-grid">' + ''.join(cards) + '</div>'
         return old['about'][1]()+section('Как устроена порфировая система', '<p>Порфировые системы связаны с магматическими интрузиями и движением горячих растворов. Они формируют прожилки, вкрапления и зоны изменения пород. Металлоносные растворы проходят по трещинам; при охлаждении из них осаждаются рудные минералы.'+cite(7)+'</p>')+diagram+minerals
 
     def production():
@@ -66,12 +75,8 @@ def install(g):
             cat='state' if s['id'] in [1,3] else 'science' if s['id'] in [5,6,7,8] else 'company' if s['id'] in [2,4,9] else 'geology' if s['id']==10 else 'map'
             text=text.replace(f'class="source" id="source-{s["id"]}"',f'class="source" data-category="{cat}" id="source-{s["id"]}"')
         text=text.replace('<div class="sources-list">',filters+'<div class="sources-list">')
-        text=text.replace('Шрифт <a href="https://fonts.google.com/specimen/Golos+Text">Golos Text</a> используется по <a href="assets/Golos-OFL.txt">SIL Open Font License</a> и хранится в проекте.','Шрифты Manrope и Inter хранятся в проекте и используются по SIL Open Font License. <a href="assets/font-licenses.txt">Лицензии шрифтов</a>. Карта — Leaflet, графики — Plotly; <a href="assets/vendor-licenses.txt">лицензии библиотек</a>.')
+        text=text.replace('Шрифт <a href="https://fonts.google.com/specimen/Golos+Text">Golos Text</a> используется по <a href="assets/Golos-OFL.txt">SIL Open Font License</a> и хранится в проекте.','Шрифты Manrope и Inter хранятся в проекте и используются по SIL Open Font License. <a href="assets/font-licenses.txt">Лицензии шрифтов</a>. Карта — Яндекс Карты, графики — Plotly; <a href="assets/vendor-licenses.txt">лицензии библиотек</a>.')
         return text
-
-    def location():
-        text=old['location'][1]()
-        return text.replace('<section class="map-section">','<section class="map-section"><div id="leaflet-map" aria-label="Карта Приамурья" role="region"></div><p class="map-legend"><span>●</span> Приблизительная отметка месторождения · Границы лицензии не показаны</p><p class="muted">Масштабируйте карту и нажмите на отметку. Подложка и названия рек и населённых пунктов: OpenStreetMap. Альтернативная карта ниже доступна независимо от Leaflet.</p>')
 
     def search():
         return heading('Навигация','Поиск по сайту','Ищите минералы, географические названия, числовые показатели и документы.')+'<form id="search-form" role="search"><label for="search-input">Что найти</label><div class="search-row"><input id="search-input" type="search" name="q" placeholder="Например, медь, вода, 2021" autocomplete="off"><button class="button">Найти</button></div></form><p id="search-status" role="status">Введите запрос для поиска.</p><div id="search-results"></div><noscript><p>Для поиска нужен JavaScript. Все материалы доступны через меню разделов.</p></noscript>'
@@ -86,7 +91,7 @@ def install(g):
             text=text.replace('<article class="risk"><h3>'+title, '<article class="risk"><img src="assets/'+file.removesuffix('.jpg')+'.webp" alt="'+g['PHOTO_INFO'][file][1]+'" loading="lazy"><small>Контекст горных работ, не измерение воздействия. Фото: АО «Тех Взрыв Инвест» '+cite(9)+'</small><h3>'+title)
         return text
 
-    pages={'index':('Главная',home),'about':('Геология Малмыжа',geology),'location':('Карта месторождения',location),'resources':('Запасы и ресурсы',resources),'production':('Добыча и переработка',production),'importance':('Значение для региона',economy),'ecology':('Экология Хабаровского края',ecology),'history':('История проекта',history),'gallery':('Фотогалерея',gallery),'updates':('Обновления материалов',updates),'sources':('Источники и достоверность',sources),'search':('Поиск по сайту',search)}
+    pages={'index':('Главная',home),'about':('Геология Малмыжа',geology),'location':('Карта месторождения',old['location'][1]),'resources':('Запасы и ресурсы',resources),'production':('Добыча и переработка',production),'importance':('Значение для региона',economy),'ecology':('Экология Хабаровского края',ecology),'history':('История проекта',history),'gallery':('Фотогалерея',gallery),'updates':('Обновления материалов',updates),'sources':('Источники и достоверность',sources),'search':('Поиск по сайту',search)}
     descriptions={s:d for s,_,d,_ in SECTIONS}|{'index':'Геология, добыча, природа и экономика Малмыжского месторождения. Документальные фотографии, карта и проверяемые данные.','search':'Поиск по текстам, статистике и источникам Малмыжского проекта.','updates':'Редакционные обновления материалов о Малмыжском месторождении.'}
 
     def render(slug):
