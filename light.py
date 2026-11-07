@@ -101,7 +101,7 @@ def install(g):
 
     def render(slug):
         text=base_render(slug)
-        text=text.replace('</head>','<link rel="stylesheet" href="assets/light.css?v=review-3"><script type="module" src="assets/light.js?v=review-3"></script></head>')
+        text=text.replace('</head>','<link rel="stylesheet" href="assets/light.css?v=review-4"><script type="module" src="assets/light.js?v=review-4"></script></head>')
         nav=''.join(f'<a href="{s}.html"'+(' aria-current="page"' if slug==s else '')+f'>{t}</a>' for s,t in [('about','Месторождение'),('production','Добыча'),('ecology','Экология'),('history','История'),('company','Амур Минералс')])
         extra=''.join(f'<a href="{s}.html">{t}</a>' for s,t in [('location','Карта'),('resources','Запасы'),('importance','Экономика'),('gallery','Фотогалерея'),('sources','Источники')])
         nav+='<details class="more-nav"><summary>Разделы</summary><div>'+extra+'</div></details>'
