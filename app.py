@@ -170,5 +170,7 @@ from portal import install
 install(globals())
 from light import install as install_light
 install_light(globals())
+from interactions import install as install_interactions
+install_interactions(globals())
 
 if __name__=='__main__':main()
