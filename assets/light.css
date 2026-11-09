@@ -68,3 +68,42 @@ body{font-size:22px;line-height:1.7}.container{max-width:1600px;padding:0 60px}.
   outline: 2px solid #765336;
   outline-offset: 3px;
 }
+
+/* Standalone actions share the home hero's fill. */
+:root {
+  --action-fill: #164e2a;
+  --action-hover: #173f35;
+}
+main a.button,
+main a:is(.text-link, .quiet-link),
+main :is(.official-links, .related-reading, .map-toolbar) > a {
+  background-color: var(--action-fill);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+}
+main a:is(.text-link, .quiet-link),
+main :is(.official-links, .related-reading, .map-toolbar) > a {
+  display: inline-flex;
+  align-items: center;
+  gap: .6em;
+  min-height: 44px;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: .57em 1.12em;
+  font: 400 clamp(19px, 1.7vw, 24px)/1.25 Georgia, 'Times New Roman', serif;
+  letter-spacing: -.025em;
+  vertical-align: middle;
+}
+main :is(.official-links, .related-reading) > a {
+  display: flex;
+}
+@media (hover: hover) {
+  main a:is(.button, .text-link, .quiet-link):hover,
+  main :is(.official-links, .related-reading, .map-toolbar) > a:hover {
+    background-color: var(--action-hover);
+    text-decoration: underline;
+    text-underline-offset: .16em;
+  }
+}
