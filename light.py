@@ -101,12 +101,37 @@ def install(g):
 
     def render(slug):
         text=base_render(slug)
-        text=text.replace('</head>','<link rel="stylesheet" href="assets/light.css?v=actions-1"><script type="module" src="assets/light.js?v=atlas-5"></script></head>')
+        text=text.replace('</head>','<link rel="stylesheet" href="assets/light.css?v=footer-1"><script type="module" src="assets/light.js?v=footer-1"></script></head>')
         nav=''.join(f'<a href="{s}.html"'+(' aria-current="page"' if slug==s else '')+f'>{t}</a>' for s,t in [('about','Месторождение'),('production','Добыча'),('ecology','Экология'),('history','История'),('company','Амур Минералс')])
         extra=''.join(f'<a href="{s}.html">{t}</a>' for s,t in [('location','Карта'),('resources','Запасы'),('importance','Экономика'),('gallery','Фотогалерея'),('sources','Источники')])
         nav+='<details class="more-nav"><summary>Разделы</summary><div>'+extra+'</div></details>'
         text=re.sub(r'(<nav id="site-nav"[^>]*>).*?</nav>',lambda m:m[1]+nav+'</nav>',text,count=1)
-        text=text.replace('<div class="footer-links">','<div class="footer-links"><a href="company.html">Амур Минералс</a>')
+        footer_items=[
+            ('index','Главная'),
+            ('about','Месторождение'),
+            ('production','Добыча'),
+            ('ecology','Экология'),
+            ('history','История'),
+            ('company','Амур Минералс'),
+            ('location','Карта'),
+            ('resources','Запасы'),
+            ('importance','Экономика'),
+            ('gallery','Фотогалерея'),
+            ('sources','Источники'),
+            ('search','Поиск'),
+        ]
+        footer_links=''.join(
+            f'<a href="{key}.html"'+(' aria-current="page"' if slug==key else '')+f'>{label}</a>'
+            for key,label in footer_items
+        )
+        footer_nav=(
+            '<div class="footer-navigation"><p class="footer-heading">Разделы сайта</p>'
+            '<nav class="footer-links" aria-label="Навигация в конце страницы">'
+            +footer_links+
+            '</nav></div>'
+        )
+        text=re.sub(r'<div class="footer-links">.*?</div>',footer_nav,text,count=1,flags=re.S)
+        text=text.replace('<div><p>Обновление сайта:', '<div class="footer-meta"><a class="footer-top" href="#main">Наверх ↑</a><p>Обновление сайта:')
         text=text.replace('Фактические материалы: проверка 5 ноября 2026','Источники проверены 5–6 ноября 2026')
         for filename in g['PHOTO_INFO']:text=text.replace('assets/'+filename,'assets/'+filename.removesuffix('.jpg')+'.webp')
         text=re.sub(r'<a href="updates.html">.*?</a>',"",text)
