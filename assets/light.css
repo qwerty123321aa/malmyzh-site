@@ -107,3 +107,94 @@ main :is(.official-links, .related-reading) > a {
     text-underline-offset: .16em;
   }
 }
+
+/* Полная навигация в конце каждой страницы */
+.site-footer .footer-inner {
+  display: grid;
+  grid-template-columns: minmax(220px, .85fr) minmax(520px, 2fr) minmax(210px, .7fr);
+  align-items: start;
+  gap: 56px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.footer-navigation { min-width: 0; }
+.footer-heading {
+  margin: 0 0 16px !important;
+  color: var(--ink) !important;
+  font: 600 15px/1.25 Manrope, Arial, sans-serif;
+  letter-spacing: 0;
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 28px;
+  align-content: start;
+  font-size: 16px;
+}
+.footer-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+  padding: 9px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.35;
+  transition: color .18s ease, border-color .18s ease, transform .18s ease;
+}
+.footer-links a::after {
+  content: '↗';
+  flex: 0 0 auto;
+  color: var(--blue);
+  font-size: .85em;
+}
+.footer-links a:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  transform: translateX(3px);
+}
+.footer-links a[aria-current="page"] {
+  color: var(--blue);
+  font-weight: 700;
+  border-color: var(--blue);
+}
+.footer-links a[aria-current="page"]::after { content: '•'; }
+.footer-meta { min-width: 0; }
+.footer-top {
+  display: inline-flex;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font: 600 15px/1.3 Manrope, Arial, sans-serif;
+  text-decoration: none;
+}
+.footer-top:hover { color: var(--blue); }
+
+@media(max-width: 1050px) {
+  .site-footer .footer-inner {
+    grid-template-columns: minmax(190px, .7fr) minmax(0, 2fr);
+    gap: 38px;
+  }
+  .footer-meta {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+  }
+}
+@media(max-width: 650px) {
+  .site-footer .footer-inner { display: block; padding: 34px 22px; }
+  .footer-navigation { margin-top: 28px !important; }
+  .footer-heading { font-size: 14px; }
+  .footer-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+    font-size: 15px;
+  }
+  .footer-links a { padding: 11px 0; }
+  .footer-meta {
+    margin-top: 28px !important;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+  }
+}
